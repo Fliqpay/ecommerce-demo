@@ -10,7 +10,7 @@ const INITIAL_STATE = {
   displayName: "",
   email: "",
   password: "",
-  confirmPassword: ""
+  confirmPassword: "",
 };
 
 const SignUp = () => {
@@ -18,7 +18,7 @@ const SignUp = () => {
 
   const { displayName, email, password, confirmPassword } = state;
 
-  const handleSubmit = async event => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (password !== confirmPassword) {
@@ -40,7 +40,7 @@ const SignUp = () => {
     }
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const { name, value } = event.target;
 
     setState({ ...state, [name]: value });
